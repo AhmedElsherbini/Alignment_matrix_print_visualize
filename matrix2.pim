@@ -1,0 +1,9 @@
+#
+#
+#  Percent Identity  Matrix - created by Clustal2.1 
+#
+#
+
+     1: protein1    100.00   62.50   66.67
+     2: Protein2     62.50  100.00   87.50
+     3: protein3     66.67   87.50  100.00
