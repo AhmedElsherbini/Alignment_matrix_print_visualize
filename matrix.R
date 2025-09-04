@@ -22,7 +22,7 @@ df <- data.frame(df, row.names = 1) # Assign column names
 colnames(df) <- rownames(df) 
 mat <- as.matrix(df) 
 print(mat) 
-save_correlation_matrix(mat,filename = "lauracamus.csv",digits=3,use="lower") 
+save_correlation_matrix(mat,filename = "hello.csv",digits=3,use="lower") 
 #website version
 infile = "matrix2.pim"
 # 1. Read file
