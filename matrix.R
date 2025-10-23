@@ -4,7 +4,7 @@ library(Hmisc)
 library(corrtable)
 library(bio3d)
 ##################################
-setwd("/home/ahmed/Downloads/align/")
+setwd("/home/ahmed/Alignment_matrix_print_visualize")
 
 #website version
 infile = "matrix2.pim"
@@ -39,25 +39,6 @@ df <- data.frame(df, row.names = 1) # Assign column names
 colnames(df) <- rownames(df) 
 mat <- as.matrix(df) 
 print(mat) 
-
-##################################
-#website version
-infile = "matrix2.pim"
-# 1. Read file
-df <- read.table(infile,
-                 header = FALSE,
-                 row.names = 1,
-                 fill = TRUE,
-                 comment.char = "#",
-                 blank.lines.skip = TRUE)
-
-
-df <- df[complete.cases(df), ] 
-df <- data.frame(df, row.names = 1) # Assign column names 
-colnames(df) <- rownames(df) 
-mat <- as.matrix(df) 
-print(mat) 
-# 6. Plot heatmap (saved as PDF)
 paletteLength <- 90
 myColor2 <- colorRampPalette(c('white', 'grey'))(paletteLength)
 
@@ -66,7 +47,7 @@ pheatmap(mat,
          cluster_cols = TRUE,
          display_numbers = round(mat, 2),
          color = myColor2)
-
+##################################
 #commandline version
 infile = "matrix_file.pim"
 # 1. Read file
